@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+
+            /*
+            URL SHORTENER
+            */
+
+            let urls = new Map();
+
+            function makeid(length) {
+                var result           = '';
+                var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+                var charactersLength = characters.length;
+                for ( var i = 0; i < length; i++ ) {
+                    result += characters.charAt(Math.floor(Math.random() * charactersLength));
+                }
+                return result;
+            }
+
+            function shorten(url) {
+                if (urls.has(url)) continue;
+                let id;
+                id = makeid(6);
+                map.set(id, url);
+            }
+            function restore(short) {
+                
+            }
+
+            shorten("http://www.facebook.com");
+
+
+
+
+
+
+        </script>
+    </body>
+</html>
